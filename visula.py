@@ -14,12 +14,12 @@ resultado = tk.StringVar()
 # functions
 def comprobar():
     oracion = verbo.get()
-    # resultadoBack = back.recorrerOracion(oracion.lower())
-    # if(resultadoBack):
-    #     resultado.set("correcto")
-    # else:
-    #     resultado.set("incorrecto")
-    
+    valida = er.comprobarER(oracion.lower())
+    if(valida):
+        resultado.set("correo valido")
+    else:
+        resultado.set("correo invalido")
+
 
 # labels
 tk.Label(window,text="Activdad 1 expreciones regulares",font=('Calibri', 14),background="#D3C3C3").place(x=130,y=50)
