@@ -2,7 +2,7 @@
 import re
 
 def comprobarER(oracion):
-    valdator = re.compile("[a-z0-9]([a-z0-9]|([._-][a-z0-9]))*[@][a-z]([a-z]|([._-][a-z]))*[.][a-z]*")
+    valdator = re.compile("[a-z0-9]([a-z0-9]|([.#$%&'*+/=?^_`{|}~-][a-z0-9]))*[@][a-z]([a-z]|([._-][a-z]))*[.][a-z]*")
     match =valdator.match(oracion)
     try:
         valida = match.group()==oracion
